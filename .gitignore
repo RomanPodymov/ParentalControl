@@ -1,3 +1,4 @@
 .gradle
 ParentalControl.xcodeproj
 gradle/
+ParentalControlCommon/build/*
