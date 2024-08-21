@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  ParentalControl
+
+  Created by Roman Podymov on 14.12.2023.
+
+*/
+
+"alert.default_title" = "Warning";
+"alert.default_button" = "OK";
+"alert.yes_button" = "Yes";
+"alert.no_button" = "No";
+"alert.delete_time_slot_text" = "Are you sure you want to delete time slot?";
+"alert.delete_account_text" = "Are you sure you want to delete account?";
+
+"signin_screen.title" = "Sign in";
+"signin_screen.switch_left" = "Is it parent ";
+"signin_screen.switch_right" = " or kid";
+"signin_screen.field_email.placeholder" = "Email";
+"signin_screen.field_password.placeholder" = "Password";
+"signin_screen.button_signin.title" = "Sign in";
+"signin_screen.button_resetpassword.title" = "Reset password";
+"signin_screen.button_register.title" = "Sign up";
+
+"register_screen.title" = "Register";
+"register_screen.field_email.placeholder" = "Email";
+"register_screen.field_password.placeholder" = "Password";
+"register_screen.field_password_again.placeholder" = "Password again";
+"register_screen.button_register.title" = "Register";
+"register_screen.message.title" = "Please check your email";
+
+"resetpassword_screen.title" = "Resetovat heslo";
+"resetpassword_screen.field_email.placeholder" = "Email";
+"resetpassword_screen.button_resetpassword.title" = "Poslat email s heslem";
+"resetpassword_screen.message.title" = "Skontrolujte svuj email";
+
+"addtimeslot_screen.label_adding" = "Add time";
+"addtimeslot_screen.label_removing" = "Remove time";
+"addtimeslot_screen.field_from.placeholder" = "From ";
+"addtimeslot_screen.field_duration.placeholder" = "Duration ";
+"addtimeslot_screen.field_description.placeholder" = "Description";
+"addtimeslot_screen.button_save.title" = "Save";
+
+"newhome_screen.button_signout.title" = "(Sign out)";
+"newhome_screen.label.available_credit" = "Available credit:";
+
+"kids_screen.title" = "Kids";
+"kids_screen.message" = "Here is the list of your kids";
+"kids_screen.empty_message" = "Přídejte své děti přes tlačítko +";
+
+"add_kid_screen.title" = "Add kid";
+"add_kid_screen.field_email.placeholder" = "Email";
+"add_kid_screen.butto_add.title" = "Add kid";
+
+"kids_time_slots_screen.title" = "Time slots";
+"kids_time_slots_screen.message" = " minutes available";
+"kids_time_slots_screen.start_date_message" = "Started at";
+"kids_time_slots_screen.was_added_message" = "Was added at";
+
+"user_screen.title" = "User";
+"user_screen.greeting" = "Hello, ";
+"user_screen.button_changephoto.title" = "Change photo";
+"user_screen.button_changepassword.title" = "Change password";
+"user_screen.button_logout.title" = "Sign out";
+"user_screen.button_deleteaccount.title" = "Delete account";
+
+"changepassword_screen.title" = "Nastavit heslo";
+"changepassword_screen.field_email.placeholder" = "Heslo";
+"changepassword_screen.button_savepassword.title" = "Ulozit";
+
+"error.nil_self" = "Object is not existing anymore";
+"error.no_kid_for_email_found" = "Kid not found. Register a new kid using main menu.";
+"error.kid_already_has_parent" = "Kid already has a parent";
+"error.no_current_user_when_required" = "User is not authorised";
+"error.kid_trying_to_use_parent_app" = "Kid attempts to sign in as a parent";
+"error.parent_trying_to_use_kid_app" = "Parent attempts to sign in as a kid";
+"error.kid_for_id_not_found" = "Kid for id not found";
+"error.cannot_add_time_slot_because_no_time_left" = "No time space left";
+"error.passwords_are_diffent" = "Passwords should be same";

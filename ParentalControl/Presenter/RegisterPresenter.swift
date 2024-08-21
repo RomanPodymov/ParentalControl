@@ -17,7 +17,7 @@ extension RegisterPresenterError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .passwordsAreDifferent:
-        // TODO
+            // TODO:
             "" // L10n.RegisterScreen.Message
         }
     }
