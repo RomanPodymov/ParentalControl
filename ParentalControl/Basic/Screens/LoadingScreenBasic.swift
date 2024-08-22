@@ -81,7 +81,7 @@ class LoadingScreenBasic: BasicScreen<LoadingPresenter> {
 
         view.backgroundColor = viewBackgroundColor
         #if canImport(AppKit)
-        // TODO: colors
+
         #elseif canImport(NVActivityIndicatorView)
             activityIndicatorViewLight.color = labelTextColor(.light)
             activityIndicatorViewDark.color = labelTextColor(.dark)

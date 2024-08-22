@@ -21,7 +21,7 @@ class TestDataProvider: RemoteDataProvider {
         .init([
             .init(objectId: "1", email: "someone@email.cz", avatar: nil),
             .init(objectId: "2", email: "other@email.cz", avatar: nil),
-            .init(objectId: "3", email: "another@email.cz", avatar: nil),
+            .init(objectId: "3", email: "another@email.cz", avatar: nil)
         ])
     }
 
@@ -41,7 +41,7 @@ class TestDataProvider: RemoteDataProvider {
                     ownerId: "1",
                     kidId: "2",
                     created: Date()
-                ),
+                )
             ],
             1)
         )

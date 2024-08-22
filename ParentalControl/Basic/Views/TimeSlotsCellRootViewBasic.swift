@@ -36,7 +36,7 @@ class TimeSlotsCellRootViewBasic: CAScreenItem {
         return [
             data.isAdding ? "+" : "-",
             String(data.activityDuration) + "m",
-            data.activityDescription,
+            data.activityDescription
         ].joined(separator: " ")
     }
 
@@ -46,7 +46,7 @@ class TimeSlotsCellRootViewBasic: CAScreenItem {
         }
         return [
             L10n.KidsTimeSlotsScreen.wasAddedMessage + " " + data.created.asStartFromLabelString,
-            data.startDate.map { L10n.KidsTimeSlotsScreen.startDateMessage + " " + $0.asStartFromLabelString },
+            data.startDate.map { L10n.KidsTimeSlotsScreen.startDateMessage + " " + $0.asStartFromLabelString }
         ].compactMap { $0 }.joined(separator: "\n")
     }
 

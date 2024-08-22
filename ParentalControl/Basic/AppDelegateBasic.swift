@@ -225,7 +225,9 @@ extension AppDelegateBasic: Coordinator {
 
     func openChangePasswordScreen() {
         if let mainScreen = window?.rootViewController as? MainScreen {
-            if let userFlowNavigationController = mainScreen.viewControllers?[safe: 1] as? UserFlowNavigationController {
+            if let userFlowNavigationController = mainScreen.viewControllers?[
+                safe: 1
+            ] as? UserFlowNavigationController {
                 let changePasswordScreen = ChangePasswordScreen(
                     coordinator: self,
                     withCloseButton: false,

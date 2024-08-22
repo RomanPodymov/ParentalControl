@@ -32,7 +32,7 @@ extension BackendlessRemoteDataProvider: RemoteDataProvider {
         let query = DataQueryBuilder()
         query.whereClause = [
             Self.isKidClause,
-            Self.isParentClause(forCurrentParent: forCurrentParent),
+            Self.isParentClause(forCurrentParent: forCurrentParent)
         ].compactMap { $0 }.joined(separator: " AND ")
         var users: MapDrivenDataStore! = Backendless.shared.data.ofTable("Users")
         return users.getObjectCount(queryBuilder: query, on: Self.queue).always(on: Self.queue) {
@@ -107,7 +107,7 @@ extension BackendlessRemoteDataProvider: RemoteDataProvider {
         let query = DataQueryBuilder()
         query.whereClause = [
             Self.isKidClause,
-            Self.isParentClause(forCurrentParent: forCurrentParent),
+            Self.isParentClause(forCurrentParent: forCurrentParent)
         ].compactMap { $0 }.joined(separator: " AND ")
         query.pageSize = count
         var users: MapDrivenDataStore! = Backendless.shared.data.ofTable("Users")
@@ -158,8 +158,7 @@ extension BackendlessRemoteDataProvider: RemoteDataProvider {
         .init(on: Self.queue) { onSuccess, onError in
             let query = DataQueryBuilder()
             query.whereClause = [
-                // Self.isCurrentUserClause,
-                Self.kidClause(kidId: kidId),
+                Self.kidClause(kidId: kidId)
             ].compactMap { $0 }.joined(separator: " AND ")
             query.sortBy = ["created DESC"]
             query.offset = offset
@@ -197,7 +196,7 @@ extension BackendlessRemoteDataProvider: RemoteDataProvider {
     private func timeSlotsCount(kidId: String) -> Promise<Int> {
         let query = DataQueryBuilder()
         query.whereClause = [
-            Self.kidClause(kidId: kidId),
+            Self.kidClause(kidId: kidId)
         ].compactMap { $0 }.joined(separator: " AND ")
         var timeSlots: MapDrivenDataStore! = Backendless.shared.data.ofTable("TimeSlots")
         return timeSlots.getObjectCount(queryBuilder: query, on: Self.queue).always {
@@ -206,15 +205,11 @@ extension BackendlessRemoteDataProvider: RemoteDataProvider {
     }
 
     func addTimeSlot(timeSlot: TimeSlotData) -> Promise<Void> {
-        availableTimeUsingSign(kidId: timeSlot.kidId).then {
-            let nextTime = timeSlot.isAdding ? $0 + timeSlot.activityDuration : $0 - timeSlot.activityDuration
-            if nextTime < 0 {
-                // TODO: no negative
-            }
+        availableTimeUsingSign(kidId: timeSlot.kidId).then { _ in
             if Configuration.isParentApp {
-                return addTimeSlotVerified(timeSlot: timeSlot, currentKid: nil)
+                addTimeSlotVerified(timeSlot: timeSlot, currentKid: nil)
             } else {
-                return addTimeSlotVerified(timeSlot: timeSlot, currentKid: Backendless.shared.userService.currentUser)
+                addTimeSlotVerified(timeSlot: timeSlot, currentKid: Backendless.shared.userService.currentUser)
             }
         }
     }

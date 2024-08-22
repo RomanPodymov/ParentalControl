@@ -21,8 +21,10 @@ protocol Screen {
 }
 
 enum AlertButton {
+    // swiftlint:disable:next identifier_name
     case ok
     case yes
+    // swiftlint:disable:next identifier_name
     case no
 
     var translation: String {

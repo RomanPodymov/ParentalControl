@@ -76,11 +76,11 @@ class MainScreenBasic: CAScreenWithTabs {
     func onCurrentUserIdLoaded(id: String?) {
         if Configuration.isParentApp {
             viewControllers = [
-                createKidsScreen(), createUserScreen(),
+                createKidsScreen(), createUserScreen()
             ]
         } else {
             viewControllers = [
-                createTimeSlotsScreen(currentUserId: id), createUserScreen(),
+                createTimeSlotsScreen(currentUserId: id), createUserScreen()
             ]
         }
     }
