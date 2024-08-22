@@ -1,0 +1,172 @@
+name: ParentalControl
+options:
+  deploymentTarget:
+    iOS: "12.0"
+    macOS: "10.15"
+  xcodeVersion: "15.4"
+packages:
+  SnapKit:
+    url: https://github.com/RomanPodymov/SnapKit.git
+    branch: develop
+  IQKeyboardManagerSwift:
+    url: https://github.com/hackiftekhar/IQKeyboardManager
+    version: 6.5.0
+  NVActivityIndicatorView:
+    url: https://github.com/ninjaprox/NVActivityIndicatorView
+    version: 5.2.0
+  Then:
+    url: https://github.com/devxoul/Then
+    version: 3.0.0
+  SwifterSwift:
+    url: https://github.com/SwifterSwift/SwifterSwift.git
+    version: 6.2.0
+  Swinject:
+    url: https://github.com/Swinject/Swinject.git
+    version: 2.8.7
+  SwiftAlertView:
+    url: https://github.com/dinhquan/SwiftAlertView.git
+    version: 2.2.1
+  DifferenceKit:
+    url: https://github.com/ra1028/DifferenceKit.git
+    version: 1.3.0
+  SwiftyAttributes:
+    url: https://github.com/eddiekaiger/SwiftyAttributes.git
+    version: 5.3.0
+  BFNavigationController:
+    url: https://github.com/RomanPodymov/BFNavigationController.git
+    branch: podymov
+  OrderedCollections:
+    url: https://github.com/apple/swift-collections.git
+    version: 1.1.0
+  Kingfisher:
+    url: https://github.com/onevcat/Kingfisher.git
+    version: 7.11.0
+  CommonAppleKit:
+    url: https://github.com/RomanPodymov/CommonAppleKit.git
+    branch: main
+  BackendlessAndPromises:
+    url: https://github.com/RomanPodymov/BackendlessAndPromises.git
+    branch: main
+targetTemplates:
+  IOSApp:
+    type: application
+    platform: iOS
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
+        PRODUCT_BUNDLE_IDENTIFIER: com.parentalcontrol.app
+      configs:
+        Debug:
+          BACKENDLESS_APP_ID: ${backendlessAppId}
+          BACKENDLESS_API_KEY: ${backendlessApiKey}
+        Release:
+          BACKENDLESS_APP_ID: ${backendlessAppId}
+          BACKENDLESS_API_KEY: ${backendlessApiKey}
+    sources:
+      - path: ParentalControl
+        excludes:
+          - macOS
+    dependencies:
+      - framework: ParentalControlCommon/build/XCFrameworks/release/ParentalControlCommon.xcframework
+      - package: SnapKit
+      - package: BackendlessAndPromises
+      - package: IQKeyboardManagerSwift
+      - package: NVActivityIndicatorView
+      - package: Then
+      - package: SwifterSwift
+      - package: Swinject
+      - package: SwiftAlertView
+      - package: DifferenceKit
+      - package: SwiftyAttributes
+      - package: OrderedCollections
+      - package: Kingfisher
+      - package: CommonAppleKit
+    info:
+      path: ParentalControl/iOS/Info.plist
+      properties:
+        BACKENDLESS_APP_ID: ${BACKENDLESS_APP_ID}
+        BACKENDLESS_API_KEY: ${BACKENDLESS_API_KEY}
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        UILaunchScreen:
+          UIColorName: ""
+        UISupportedInterfaceOrientations: [
+          UIInterfaceOrientationPortrait,
+          UIInterfaceOrientationPortraitUpsideDown
+        ]
+    preBuildScripts:
+      - script: "mint run swiftgen"
+        name: SwiftGen
+    postCompileScripts:
+      - script: "mint run swiftformat . --swiftversion 5.9"
+        name: SwiftFormat
+      - script: "mint run swiftlint"
+        name: SwiftLint
+targets:
+  ParentalControlApp:
+    templates:
+      - IOSApp
+    templateAttributes:
+      assetsToExclude: IconKids
+      backendlessAppId: ""
+      backendlessApiKey: ""
+    settings:
+      base:
+        # SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) IS_PARENT_APP"
+        PRODUCT_NAME: "Parental tracking"
+  ParentalControlAppTest:
+    templates:
+      - IOSApp
+    templateAttributes:
+      assetsToExclude: IconKids
+      backendlessAppId: ""
+      backendlessApiKey: ""
+    settings:
+      base:
+        # SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) IS_PARENT_APP"
+        PRODUCT_NAME: "Parental tracking Test"
+  ParentalControlAppMacOS:
+    type: application
+    platform: macOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.parentalcontrol.app
+      configs:
+        Debug:
+          BACKENDLESS_APP_ID: ""
+          BACKENDLESS_API_KEY: ""
+        Release:
+          BACKENDLESS_APP_ID: ""
+          BACKENDLESS_API_KEY: ""
+    sources:
+      - path: ParentalControl
+        excludes:
+          - iOS
+    dependencies:
+      - package: SnapKit
+      - package: BackendlessAndPromises
+      - package: Then
+      - package: SwifterSwift
+      - package: Swinject
+      - package: DifferenceKit
+      - package: SwiftyAttributes
+      - package: OrderedCollections
+      - package: Kingfisher
+      - package: CommonAppleKit
+      - package: BFNavigationController
+    info:
+      path: ParentalControl/macOS/Info.plist
+      properties:
+        LSApplicationCategoryType: public.app-category.lifestyle
+        BACKENDLESS_APP_ID: ${BACKENDLESS_APP_ID}
+        BACKENDLESS_API_KEY: ${BACKENDLESS_API_KEY}
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+    preBuildScripts:
+      - script: "mint run swiftgen"
+        name: SwiftGen
+    postCompileScripts:
+      - script: "mint run swiftformat . --swiftversion 5.9"
+        name: SwiftFormat
+      - script: "mint run swiftlint"
+        name: SwiftLint
