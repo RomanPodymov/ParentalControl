@@ -7,3 +7,5 @@ ParentalControl/iOS/Info.plist
 ParentalControl/Generated
 gradlew
 gradlew.bat
+local.properties
+ParentalControlCommon/.idea

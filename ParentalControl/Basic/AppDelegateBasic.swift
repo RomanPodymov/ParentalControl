@@ -137,9 +137,7 @@ extension AppDelegateBasic: Coordinator {
     }
 
     func openAddKid(hours: Int?, minutes: Int?) {
-        if let _, let _ {
-            let _ = window?.rootViewController as? DurationScreen
-
+        if hours != nil, minutes != nil {
         } else {
             let addKidScreen = AddKidScreen(
                 coordinator: self,
