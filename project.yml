@@ -114,17 +114,6 @@ targets:
       base:
         # SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) IS_PARENT_APP"
         PRODUCT_NAME: "Parental tracking"
-  ParentalControlAppTest:
-    templates:
-      - IOSApp
-    templateAttributes:
-      assetsToExclude: IconKids
-      backendlessAppId: ""
-      backendlessApiKey: ""
-    settings:
-      base:
-        # SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) IS_PARENT_APP"
-        PRODUCT_NAME: "Parental tracking Test"
   ParentalControlAppMacOS:
     type: application
     platform: macOS
@@ -165,6 +154,23 @@ targets:
     preBuildScripts:
       - script: "mint run swiftgen"
         name: SwiftGen
+    postCompileScripts:
+      - script: "mint run swiftformat . --swiftversion 5.9"
+        name: SwiftFormat
+      - script: "mint run swiftlint"
+        name: SwiftLint
+  ParentalControlAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [ParentalControlTests]
+    dependencies:
+      - target: ParentalControlApp
+    info:
+      path: ParentalControlTests/Info.plist
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 1
+        PRODUCT_BUNDLE_IDENTIFIER: com.parentalcontrol.apptests
     postCompileScripts:
       - script: "mint run swiftformat . --swiftversion 5.9"
         name: SwiftFormat
