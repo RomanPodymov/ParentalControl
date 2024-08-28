@@ -6,13 +6,18 @@
 //  Copyright © 2024 Calcium. All rights reserved.
 //
 
-@testable import ParentalControlAppMacOS
+import ParentalControlAppMacOS
 import XCTest
 
 class ParentalControlTests: XCTestCase {
-    func testDataProvider() {
+    func testOpenScreen() {
         // Given
-        let signInScreen = SignInScreen()
-        // signInScreen.presenter
+        let appDelegate = AppDelegate()
+
+        // When
+        appDelegate.openMainScreen()
+
+        // Then
+        XCTAssertNotNil(appDelegate.window?.rootViewController)
     }
 }

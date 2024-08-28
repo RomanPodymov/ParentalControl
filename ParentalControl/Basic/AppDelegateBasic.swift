@@ -94,7 +94,7 @@ extension AppDelegateBasic: Coordinator {
         )
     }
 
-    func openMainScreen() {
+    public func openMainScreen() {
         let rootScreen = window?.rootViewController
         if let mainScreen = rootScreen as? MainScreen {
             mainScreen.willAppear()
