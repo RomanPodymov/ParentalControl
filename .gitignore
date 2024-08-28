@@ -7,3 +7,5 @@ ParentalControlCommon/.idea
 ParentalControlTests/Info.plist
 ParentalControlCommon/local.properties
 ParentalControlCommon/.gradle/config.properties
+gradlew.bat
+.gradle/

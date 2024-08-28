@@ -159,18 +159,17 @@ targets:
         name: SwiftFormat
       - script: "mint run swiftlint"
         name: SwiftLint
-  ParentalControlAppTests:
+  ParentalControlAppMacOSTests:
     type: bundle.unit-test
-    platform: iOS
+    platform: macOS
     sources: [ParentalControlTests]
     dependencies:
-      - target: ParentalControlApp
-    info:
-      path: ParentalControlTests/Info.plist
+      - target: ParentalControlAppMacOS
     settings:
       base:
-        TARGETED_DEVICE_FAMILY: 1
-        PRODUCT_BUNDLE_IDENTIFIER: com.parentalcontrol.apptests
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) TEST_ENVIRONMENT"
+    info:
+      path: ParentalControlTests/Info.plist
     postCompileScripts:
       - script: "mint run swiftformat . --swiftversion 5.9"
         name: SwiftFormat

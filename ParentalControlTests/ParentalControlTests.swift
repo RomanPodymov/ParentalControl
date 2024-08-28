@@ -6,11 +6,13 @@
 //  Copyright © 2024 Calcium. All rights reserved.
 //
 
-//@testable import ParentalControlApp
+@testable import ParentalControlAppMacOS
 import XCTest
 
 class ParentalControlTests: XCTestCase {
-    func test1() {
-    
+    func testDataProvider() {
+        // Given
+        let signInScreen = SignInScreen()
+        // signInScreen.presenter
     }
 }

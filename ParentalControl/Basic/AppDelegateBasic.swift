@@ -39,7 +39,13 @@ extension Container: Then {}
 
 public class AppDelegateBasic: CAAppDelegate {
     private lazy var depContainer = Container().then {
-        $0.register(RemoteDataProvider.self) { _ in BackendlessRemoteDataProvider.shared }
+        $0.register(RemoteDataProvider.self) { _ in
+            #if TEST_ENVIRONMENT
+                return TestDataProvider.shared
+            #else
+                BackendlessRemoteDataProvider.shared
+            #endif
+        }
     }
 
     func initBE() {
