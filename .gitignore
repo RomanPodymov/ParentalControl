@@ -1,12 +1,9 @@
-.gradle
 ParentalControl.xcodeproj
-gradle/
 ParentalControlCommon/build/*
 ParentalControl/macOS/Info.plist
 ParentalControl/iOS/Info.plist
 ParentalControl/Generated
-gradlew
-gradlew.bat
-local.properties
 ParentalControlCommon/.idea
 ParentalControlTests/Info.plist
+ParentalControlCommon/local.properties
+ParentalControlCommon/.gradle/config.properties
