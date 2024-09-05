@@ -2,7 +2,6 @@ ParentalControl.xcodeproj
 ParentalControlCommon/build/*
 ParentalControl/macOS/Info.plist
 ParentalControl/iOS/Info.plist
-ParentalControl/Generated
 ParentalControlCommon/.idea
 ParentalControlTests/Info.plist
 ParentalControlCommon/local.properties
