@@ -122,11 +122,11 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.parentalcontrol.app
       configs:
         Debug:
-          BACKENDLESS_APP_ID: ""
-          BACKENDLESS_API_KEY: ""
+          BACKENDLESS_APP_ID: ${backendlessAppId}
+          BACKENDLESS_API_KEY: ${backendlessApiKey}
         Release:
-          BACKENDLESS_APP_ID: ""
-          BACKENDLESS_API_KEY: ""
+          BACKENDLESS_APP_ID: ${backendlessAppId}
+          BACKENDLESS_API_KEY: ${backendlessApiKey}
     sources:
       - path: ParentalControl
         excludes:
