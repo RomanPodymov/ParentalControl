@@ -12,12 +12,12 @@ import XCTest
 class ParentalControlTests: XCTestCase {
     func testOpenScreen() {
         // Given
-        //let appDelegate = AppDelegate()
+        let appDelegate = AppDelegate()
 
         // When
-        //appDelegate.openMainScreen()
+        appDelegate.openMainScreen()
 
         // Then
-        //XCTAssertNotNil(appDelegate.window?.rootViewController)
+        XCTAssertNotNil(appDelegate.window?.rootViewController)
     }
 }
