@@ -1,7 +1,7 @@
 # ParentalControl
 
-![ParentalControl running iOS](https://github.com/RomanPodymov/Calcium/blob/main/Screenshot/running_iOS.png "ParentalControl running iOS")
-![ParentalControl running macOS](https://github.com/RomanPodymov/Calcium/blob/main/Screenshot/running_macOS.png "ParentalControl running macOS")
+![ParentalControl running iOS](https://github.com/RomanPodymov/ParentalControl/blob/main/Screenshot/running_iOS.png "ParentalControl running iOS")
+![ParentalControl running macOS](https://github.com/RomanPodymov/ParentalControl/blob/main/Screenshot/running_macOS.png "ParentalControl running macOS")
 
 How to run it?
 
