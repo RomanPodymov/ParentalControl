@@ -1,0 +1,6 @@
+strings:
+  inputs:
+    - ParentalControl/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: ParentalControl/Generated/Strings.swift

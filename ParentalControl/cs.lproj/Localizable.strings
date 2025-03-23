@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  ParentalControl
+
+  Created by Roman Podymov on 14.12.2023.
+
+*/
+
+"alert.default_title" = "Upozornění";
+"alert.default_button" = "OK";
+"alert.yes_button" = "Ano";
+"alert.no_button" = "Ne";
+"alert.delete_time_slot_text" = "Určitě chcete smazat položku?";
+"alert.delete_account_text" = "Určitě chcete smazat svůj účet?";
+
+"signin_screen.title" = "Přihlásit se";
+"signin_screen.switch_left" = "Je to rodič ";
+"signin_screen.switch_right" = " nebo ditě";
+"signin_screen.field_email.placeholder" = "Email";
+"signin_screen.field_password.placeholder" = "Heslo";
+"signin_screen.button_signin.title" = "Přihlásit se";
+"signin_screen.button_resetpassword.title" = "Resetovat heslo";
+"signin_screen.button_register.title" = "Registrovat se";
+
+"register_screen.title" = "Registrovat se";
+"register_screen.field_email.placeholder" = "Email";
+"register_screen.field_password.placeholder" = "Heslo";
+"register_screen.field_password_again.placeholder" = "Heslo znovu";
+"register_screen.button_register.title" = "Registrovat se";
+"register_screen.message.title" = "Zkontrolujte, prosím, svůj email";
+
+"resetpassword_screen.title" = "Resetovat heslo";
+"resetpassword_screen.field_email.placeholder" = "Email";
+"resetpassword_screen.button_resetpassword.title" = "Poslat email s heslem";
+"resetpassword_screen.message.title" = "Zkontrolujte, prosím, svůj email";
+
+"addtimeslot_screen.label_adding" = "Přidat čas";
+"addtimeslot_screen.label_removing" = "Odebrat čas";
+"addtimeslot_screen.field_from.placeholder" = "Od ";
+"addtimeslot_screen.field_duration.placeholder" = "Delka ";
+"addtimeslot_screen.field_description.placeholder" = "Popis";
+"addtimeslot_screen.button_save.title" = "Uložit";
+
+"newhome_screen.button_signout.title" = "(Odhlasit)";
+"newhome_screen.label_available_credit.title" = "Aktuální kredit:";
+
+"kids_screen.title" = "Děti";
+"kids_screen.message" = "Tady máte seznam Vašich dětí";
+"kids_screen.empty_message" = "Přídejte své děti přes tlačítko +";
+
+"add_kid_screen.title" = "Pridat dite";
+"add_kid_screen.field_email.placeholder" = "Email";
+"add_kid_screen.butto_add.title" = "Pridat dite";
+
+"kids_time_slots_screen.title" = "Časy";
+"kids_time_slots_screen.message" = " minut dostupno";
+"kids_time_slots_screen.start_date_message" = "Začalo v";
+"kids_time_slots_screen.was_added_message" = "Bylo přidáno v";
+
+"user_screen.title" = "Uživatel";
+"user_screen.greeting" = "Dobrý den, ";
+"user_screen.button_changephoto.title" = "Změnit foto";
+"user_screen.button_changepassword.title" = "Změnit heslo";
+"user_screen.button_logout.title" = "Odhlasit se";
+"user_screen.button_deleteaccount.title" = "Odstranit účet";
+
+"changepassword_screen.title" = "Nastavit heslo";
+"changepassword_screen.field_email.placeholder" = "Heslo";
+"changepassword_screen.button_savepassword.title" = "Ulozit";
+
+"error.nil_self" = "Object už neexistuje";
+"error.no_kid_for_email_found" = "Toto ditě nebylo nalezeno. Zaregestrujte si ho přes hlavní menu.";
+"error.kid_already_has_parent" = "Ditě už má rodiče";
+"error.no_current_user_when_required" = "Uživatel není přihlašený";
+"error.kid_trying_to_use_parent_app" = "Ditě se chce přihlasit jako rodič";
+"error.parent_trying_to_use_kid_app" = "Rodič se chce přihlasit jako ditě";
+"error.kid_for_id_not_found" = "Ditě s tímto id neexistuje";
+"error.cannot_add_time_slot_because_no_time_left" = "Volný čas už není";
+"error.passwords_are_diffent" = "Hesla musí být stejná";

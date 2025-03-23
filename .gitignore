@@ -1,0 +1,10 @@
+ParentalControl.xcodeproj
+ParentalControlCommon/build/*
+ParentalControl/macOS/Info.plist
+ParentalControl/iOS/Info.plist
+ParentalControlCommon/.idea
+ParentalControlCommon/local.properties
+ParentalControlCommon/.gradle/config.properties
+gradlew.bat
+.gradle/
+ParentalControlTests/macOS/Info.plist
