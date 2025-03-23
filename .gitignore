@@ -5,6 +5,8 @@ ParentalControl/iOS/Info.plist
 ParentalControlCommon/.idea
 ParentalControlCommon/local.properties
 ParentalControlCommon/.gradle/config.properties
+ParentalControlTests/macOS/Info.plist
 gradlew.bat
 .gradle/
-ParentalControlTests/macOS/Info.plist
+gradlew
+gradle/
