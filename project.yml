@@ -46,7 +46,7 @@ packages:
     version: 0.0.1
   BackendlessAndPromises:
     url: https://github.com/RomanPodymov/BackendlessAndPromises.git
-    version: 1.0.0
+    branch: main
 targetTemplates:
   IOSApp:
     type: application
