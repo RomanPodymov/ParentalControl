@@ -40,13 +40,13 @@ packages:
     version: 1.1.4
   Kingfisher:
     url: https://github.com/onevcat/Kingfisher.git
-    version: 7.11.0
+    version: 7.12.0
   CommonAppleKit:
     url: https://github.com/RomanPodymov/CommonAppleKit.git
     version: 0.0.1
   BackendlessAndPromises:
     url: https://github.com/RomanPodymov/BackendlessAndPromises.git
-    branch: main
+    version: 1.0.0
 targetTemplates:
   IOSApp:
     type: application
