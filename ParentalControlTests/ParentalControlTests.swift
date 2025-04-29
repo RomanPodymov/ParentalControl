@@ -3,7 +3,7 @@
 //  ParentalControlTests
 //
 //  Created by Roman Podymov on 28/08/2024.
-//  Copyright © 2024 Calcium. All rights reserved.
+//  Copyright © 2024 ParentalControl. All rights reserved.
 //
 
 #if canImport(ParentalControlAppMacOS)
